@@ -25,13 +25,15 @@ function Votacao() {
         Cada clique conta um voto para tirar o peão da fazenda.
       </p>
 
-      {naRoca.map((p) => (
-        <ParticipanteCard
-          key={p.id}
-          participante={p}
-          onVotar={handleVotar}
-        />
-      ))}
+      <section className="grade-roca" aria-label="Participantes na roça">
+        {naRoca.map((p) => (
+          <ParticipanteCard
+            key={p.id}
+            participante={p}
+            onVotar={handleVotar}
+          />
+        ))}
+      </section>
 
       {foraDaRoca.map((p) =>
       <ParticipanteCard
