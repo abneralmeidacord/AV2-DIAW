@@ -20,7 +20,7 @@ function Resultado() {
   }
 
   return (
-    <main className="pagina">
+    <main className="pagina resultado">
       <h1>Parcial da eliminação</h1>
       <p className="total-votos">
         <strong>{total.toLocaleString('pt-BR')}</strong>
@@ -29,11 +29,11 @@ function Resultado() {
 
       {total === 0 ? (
         <div className="resultado-vazio">
-          <p>Ainda não há votos registrados. Seja o primeiro a votar!</p>
-          <Link to="/votacao" className="botao botao-principal">Ir para votação</Link>
+          <p>Nenhum voto ainda. Escolha quem sai da roça para ver a parcial.</p>
+          <Link to="/votacao" className="botao botao-principal">Ir para a votação</Link>
         </div>
       ) : (
-        <ol className="placar" aria-label="Resultado parcial da eliminação">
+        <ol className="placar">
           {resultado.map((participante, indice) => (
             <li
               key={participante.id}
