@@ -35,11 +35,22 @@ function Votacao() {
         ))}
       </section>
 
-      {foraDaRoca.map((p) =>
-      <ParticipanteCard
-        key={p.id}
-        participante={p}
-      />)}
+      <section className="fora-da-roca">
+        <h1>Demais Peões</h1>
+        <p className="pagina-descricao">
+          Fora da roça nesta semana, não podem receber votos
+        </p>
+
+        <section className="grade-fora-da-roca" aria-label="Participantes fora da roça">
+          {foraDaRoca.map((p) =>
+            <ParticipanteCard
+              key={p.id}
+              participante={p}
+            />)}
+        </section>
+      </section>
+
+
     </main>
   );
 }
